@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oolavia — Handbags, Sling Bags, Totes & Wallets</title>
+  <meta name="description" content="Oolavia designs elegant ladies handbags, sling bags, tote bags and men's wallets. Shop the collection on Amazon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">Oolavia</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop</a>
+      <a href="#story">Our Story</a>
+      <a href="#promise">Why Oolavia</a>
+      <a href="#" class="btn btn-small amazon-store">Amazon Store</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">New Collection</p>
+        <h1>Carry your <em>story</em> with grace.</h1>
+        <p class="lead">Thoughtfully crafted handbags, sling bags, totes and wallets, designed to move with you from morning meetings to midnight plans.</p>
+        <div class="hero-cta">
+          <a href="#shop" class="btn">Explore the Collection</a>
+          <a href="#" class="btn btn-ghost amazon-store">Visit our Amazon Store</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="hero-card c1" id="heroA"></div>
+        <div class="hero-card c2" id="heroB"></div>
+        <div class="hero-card c3" id="heroC"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Ladies Handbags</span><i>✦</i><span>Sling Bags</span><i>✦</i><span>Tote Bags</span><i>✦</i><span>Men's Wallets</span><i>✦</i>
+        <span>Ladies Handbags</span><i>✦</i><span>Sling Bags</span><i>✦</i><span>Tote Bags</span><i>✦</i><span>Men's Wallets</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- COLLECTIONS -->
+    <section class="section" id="collections">
+      <div class="section-head">
+        <p class="eyebrow">Collections</p>
+        <h2>Find your <em>signature</em> piece</h2>
+      </div>
+      <div class="collections" id="collectionGrid"></div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section section-tint" id="shop">
+      <div class="section-head">
+        <p class="eyebrow">The Collection</p>
+        <h2>Shop Oolavia <em>favourites</em></h2>
+        <p class="sub">Every piece is available on Amazon, with fast delivery and easy returns.</p>
+      </div>
+      <div class="filters" id="filters" role="tablist"></div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section story" id="story">
+      <div class="story-art" aria-hidden="true">
+        <div class="story-frame"><div id="storyBag"></div></div>
+      </div>
+      <div class="story-text">
+        <p class="eyebrow">Our Story</p>
+        <h2>Designed for <em>real life</em>, made to be loved.</h2>
+        <p>Oolavia began with a simple belief: a good bag should be beautiful and work as hard as you do. We pair refined, timeless design with practical details, such as roomy interiors, secure closures and comfortable straps.</p>
+        <p>From statement handbags to understated men's wallets, every Oolavia piece is made with careful materials and an eye for the little details that make everyday carry feel special.</p>
+        <a href="#shop" class="btn">Shop the Collection</a>
+      </div>
+    </section>
+
+    <!-- PROMISE -->
+    <section class="section section-dark" id="promise">
+      <div class="section-head">
+        <p class="eyebrow">Why Oolavia</p>
+        <h2>Small details, <em>big difference</em></h2>
+      </div>
+      <div class="promises">
+        <div class="promise"><span class="icon">◈</span><h3>Quality Materials</h3><p>Premium vegan leather and durable hardware chosen to age gracefully.</p></div>
+        <div class="promise"><span class="icon">❖</span><h3>Timeless Design</h3><p>Silhouettes that outlast trends and match every wardrobe.</p></div>
+        <div class="promise"><span class="icon">✦</span><h3>Thoughtful Function</h3><p>Smart pockets, secure zips and comfortable straps, everywhere you look.</p></div>
+        <div class="promise"><span class="icon">☗</span><h3>Easy on Amazon</h3><p>Trusted checkout, fast delivery and hassle-free returns.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Ready to find yours?</h2>
+      <p>Browse the full Oolavia range on Amazon.</p>
+      <a href="#" class="btn btn-light amazon-store">Shop on Amazon</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a href="#top" class="logo">Oolavia</a>
+        <p class="muted">Handbags · Sling Bags · Totes · Wallets</p>
+      </div>
+      <div class="footer-links">
+        <a href="#collections">Collections</a>
+        <a href="#shop">Shop</a>
+        <a href="#story">Our Story</a>
+        <a href="#" class="amazon-store">Amazon Store</a>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> Oolavia. All rights reserved. Products are sold exclusively on Amazon.</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

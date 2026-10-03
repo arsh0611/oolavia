@@ -1,0 +1,61 @@
+/* ==========================================================
+   EDIT THIS FILE to manage your products.
+
+   - amazonStore : link to your Amazon brand store (used in nav/footer)
+   - image       : path to a photo, e.g. "images/rose-tote.jpg".
+                   Leave "" to show an elegant illustration instead.
+   - url         : the Amazon product link ("Buy on Amazon" button)
+   - price       : optional. Set to "" to hide it.
+   - category    : one of "handbags", "wallets", "sling", "tote"
+   ========================================================== */
+
+const AMAZON_STORE = "https://www.amazon.in/"; // TODO: replace with your Oolavia brand store link
+
+const CATEGORIES = [
+  { id: "handbags", label: "Ladies Handbags", blurb: "Polished everyday elegance" },
+  { id: "sling",    label: "Sling Bags",      blurb: "Hands-free, effortlessly chic" },
+  { id: "tote",     label: "Tote Bags",       blurb: "Roomy, refined, ready for anything" },
+  { id: "wallets",  label: "Men's Wallets",   blurb: "Slim, sharp, built to last" },
+];
+
+const PRODUCTS = [
+  { name: "Aurelia Structured Handbag", category: "handbags", color: "#b8745a", tag: "Bestseller",
+    desc: "Structured silhouette with a gold-tone clasp and soft suede lining.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Celeste Top-Handle Bag", category: "handbags", color: "#2f3b3a",
+    desc: "A timeless top-handle with detachable strap and room for essentials.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Blush Everyday Satchel", category: "handbags", color: "#d9a6a0", tag: "New",
+    desc: "Soft vegan leather in a blush tone that pairs with everything.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+
+  { name: "Luna Crossbody Sling", category: "sling", color: "#8a5a44", tag: "Bestseller",
+    desc: "Compact crossbody with an adjustable strap and secure zip closure.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Mira Mini Sling", category: "sling", color: "#c9b79c",
+    desc: "Pocket-sized charm for phone, cards and lipstick.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Noor Chain Sling", category: "sling", color: "#1f1f24", tag: "New",
+    desc: "Evening-ready sling with a delicate metal chain strap.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+
+  { name: "Soleil Classic Tote", category: "tote", color: "#a4693f",
+    desc: "Generously sized tote with an inner pocket and magnetic closure.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Marais Work Tote", category: "tote", color: "#3b4a5a", tag: "Bestseller",
+    desc: "Fits a 14\" laptop, a notebook and your whole day.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Sage Weekend Tote", category: "tote", color: "#8c9a82",
+    desc: "Lightweight, spacious and made for long weekends.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+
+  { name: "Atlas Bifold Wallet", category: "wallets", color: "#3a2a22", tag: "Bestseller",
+    desc: "Slim bifold with RFID protection and multiple card slots.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Cove Card Holder", category: "wallets", color: "#6b4a34",
+    desc: "Minimal card holder that disappears into any pocket.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+  { name: "Onyx Trifold Wallet", category: "wallets", color: "#17171a", tag: "New",
+    desc: "Classic trifold with a coin pocket and ID window.",
+    price: "", image: "", url: "https://www.amazon.in/" },
+];
