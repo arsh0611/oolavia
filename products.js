@@ -19,6 +19,86 @@ const CATEGORIES = [
 ];
 
 const PRODUCTS = [
+  { 
+    name: "Heritage Checkered Top-Handle", 
+    category: "handbags", 
+    color: "#8b5a3c", 
+    tag: "New Arrival",
+    desc: "Structured checkered silhouette featuring a signature gold-tone clasp and versatile top handle.",
+    price: "", // Add a price here like "₹1,499" or leave empty to hide
+    image: "images/brownSling.PNG", // This tells the site to use your photo instead of the SVG illustration
+    url: "https://www.amazon.in/" // Replace with the actual Amazon link for this specific bag
+  },
+  { 
+    name: "Dusty Rose Signature Satchel", 
+    category: "handbags", 
+    color: "#ab6b76", 
+    tag: "Trending",
+    desc: "An elegant dual-tone satchel featuring a smooth pink flap, textured canvas body, and our signature gold bird emblem.",
+    price: "", 
+    image: "images/pink-satchel.jpg", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Ivory Signature Satchel", 
+    category: "handbags", 
+    color: "#dcd3c6", 
+    tag: "New Arrival",
+    desc: "A timeless dual-tone satchel featuring a smooth ivory flap, textured canvas body, and our signature gold bird emblem.",
+    price: "", 
+    image: "images/cream-satchel.jpg", 
+    url: "https://www.amazon.in/" 
+  },
+{ 
+    name: "Beige Ribbed Elegance Satchel", 
+    category: "sling", // Changed from "handbags" to "sling"
+    color: "#d8c3b3", 
+    tag: "Best Seller",
+    desc: "A sophisticated structured satchel featuring a tactile vertically ribbed flap, smooth beige body, and our signature gold emblem.",
+    price: "", 
+    image: "images/beige-ribbed-satchel.png", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Botanical Canvas Everyday Tote", 
+    category: "tote", 
+    color: "#e6e4df", 
+    tag: "New Arrival",
+    desc: "Spacious everyday canvas tote featuring vibrant botanical patterned straps, an exterior pocket, and a detachable crossbody strap.",
+    price: "", 
+    image: "images/floral-canvas-tote.png", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Signature Embossed Leather Wallet", 
+    category: "wallets", 
+    color: "#8b5a2b", 
+    tag: "Classic",
+    desc: "A refined bifold wallet crafted from textured brown leather, featuring our elegantly embossed signature bird emblem.",
+    price: "", 
+    image: "images/brown-leather-wallet.png", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Midnight Black Embossed Wallet", 
+    category: "wallets", 
+    color: "#1a1a1a", 
+    tag: "New Arrival",
+    desc: "A sleek bifold wallet crafted from textured black leather, featuring our elegantly embossed signature bird emblem.",
+    price: "", 
+    image: "images/black-leather-wallet.png", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Cognac Classic Embossed Wallet", 
+    category: "wallets", 
+    color: "#b06d3b", 
+    tag: "Bestseller",
+    desc: "A classic bifold wallet in a warm cognac brown textured leather, finished with our signature embossed bird emblem.",
+    price: "", 
+    image: "images/tan-leather-wallet.png", 
+    url: "https://www.amazon.in/" 
+  },
   { name: "Aurelia Structured Handbag", category: "handbags", color: "#b8745a", tag: "Bestseller",
     desc: "Structured silhouette with a gold-tone clasp and soft suede lining.",
     price: "", image: "", url: "https://www.amazon.in/" },
@@ -58,44 +138,5 @@ const PRODUCTS = [
   { name: "Onyx Trifold Wallet", category: "wallets", color: "#17171a", tag: "New",
     desc: "Classic trifold with a coin pocket and ID window.",
     price: "", image: "", url: "https://www.amazon.in/" },
-  { 
-    name: "Heritage Checkered Top-Handle", 
-    category: "handbags", 
-    color: "#8b5a3c", 
-    tag: "New Arrival",
-    desc: "Structured checkered silhouette featuring a signature gold-tone clasp and versatile top handle.",
-    price: "", // Add a price here like "₹1,499" or leave empty to hide
-    image: "images/brownSling.PNG", // This tells the site to use your photo instead of the SVG illustration
-    url: "https://www.amazon.in/" // Replace with the actual Amazon link for this specific bag
-  },
-  { 
-    name: "Dusty Rose Signature Satchel", 
-    category: "handbags", 
-    color: "#ab6b76", 
-    tag: "Trending",
-    desc: "An elegant dual-tone satchel featuring a smooth pink flap, textured canvas body, and our signature gold bird emblem.",
-    price: "", 
-    image: "images/pink-satchel.jpg", 
-    url: "https://www.amazon.in/" 
-  },
-  { 
-    name: "Ivory Signature Satchel", 
-    category: "handbags", 
-    color: "#dcd3c6", 
-    tag: "New Arrival",
-    desc: "A timeless dual-tone satchel featuring a smooth ivory flap, textured canvas body, and our signature gold bird emblem.",
-    price: "", 
-    image: "images/cream-satchel.jpg", 
-    url: "https://www.amazon.in/" 
-  },
-  { 
-    name: "Beige Ribbed Elegance Satchel", 
-    category: "handbags", 
-    color: "#d8c3b3", 
-    tag: "Best Seller",
-    desc: "A sophisticated structured satchel featuring a tactile vertically ribbed flap, smooth beige body, and our signature gold emblem.",
-    price: "", 
-    image: "images/beige-ribbed-satchel.png", 
-    url: "https://www.amazon.in/" 
-  },
+  
 ];
