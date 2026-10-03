@@ -58,4 +58,14 @@ const PRODUCTS = [
   { name: "Onyx Trifold Wallet", category: "wallets", color: "#17171a", tag: "New",
     desc: "Classic trifold with a coin pocket and ID window.",
     price: "", image: "", url: "https://www.amazon.in/" },
+  { 
+    name: "Heritage Checkered Top-Handle", 
+    category: "handbags", 
+    color: "#8b5a3c", 
+    tag: "New Arrival",
+    desc: "Structured checkered silhouette featuring a signature gold-tone clasp and versatile top handle.",
+    price: "", // Add a price here like "₹1,499" or leave empty to hide
+    image: "images/brownSling.PNG", // This tells the site to use your photo instead of the SVG illustration
+    url: "https://www.amazon.in/" // Replace with the actual Amazon link for this specific bag
+  },
 ];

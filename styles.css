@@ -36,6 +36,11 @@ em { font-style: italic; color: var(--gold); }
 }
 .nav.scrolled { background: rgba(250,245,238,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(0,0,0,.06); padding: 12px 5vw; }
 .logo { font-family: var(--serif); font-size: 2rem; font-weight: 600; letter-spacing: .06em; }
+.logo img {
+  height: 55px; /* You can change this number to make it bigger or smaller */
+  width: auto;
+  display: block;
+}
 .nav-links { display: flex; align-items: center; gap: 34px; font-size: .88rem; letter-spacing: .08em; text-transform: uppercase; }
 .nav-links a:not(.btn) { position: relative; }
 .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px; background: var(--gold); transition: .3s; }
