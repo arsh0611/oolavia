@@ -68,4 +68,34 @@ const PRODUCTS = [
     image: "images/brownSling.PNG", // This tells the site to use your photo instead of the SVG illustration
     url: "https://www.amazon.in/" // Replace with the actual Amazon link for this specific bag
   },
+  { 
+    name: "Dusty Rose Signature Satchel", 
+    category: "handbags", 
+    color: "#ab6b76", 
+    tag: "Trending",
+    desc: "An elegant dual-tone satchel featuring a smooth pink flap, textured canvas body, and our signature gold bird emblem.",
+    price: "", 
+    image: "images/pink-satchel.jpg", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Ivory Signature Satchel", 
+    category: "handbags", 
+    color: "#dcd3c6", 
+    tag: "New Arrival",
+    desc: "A timeless dual-tone satchel featuring a smooth ivory flap, textured canvas body, and our signature gold bird emblem.",
+    price: "", 
+    image: "images/cream-satchel.jpg", 
+    url: "https://www.amazon.in/" 
+  },
+  { 
+    name: "Beige Ribbed Elegance Satchel", 
+    category: "handbags", 
+    color: "#d8c3b3", 
+    tag: "Best Seller",
+    desc: "A sophisticated structured satchel featuring a tactile vertically ribbed flap, smooth beige body, and our signature gold emblem.",
+    price: "", 
+    image: "images/beige-ribbed-satchel.png", 
+    url: "https://www.amazon.in/" 
+  },
 ];
