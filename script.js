@@ -51,16 +51,30 @@ document.querySelectorAll(".amazon-store").forEach((a) => {
 
 /* ---------- Hero illustrations ---------- */
 const byCat = (id) => PRODUCTS.find((p) => p.category === id);
-document.getElementById("heroA").innerHTML = illustration("handbags", byCat("handbags").color);
-document.getElementById("heroB").innerHTML = illustration("tote", byCat("tote").color);
-document.getElementById("heroC").innerHTML = illustration("sling", byCat("sling").color);
-document.getElementById("storyBag").innerHTML = illustration("handbags", "#9c5f48");
+
+// We add inline styling so your images fit beautifully inside the existing frames
+const heroImgStyle = 'style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;"';
+const storyImgStyle = 'style="width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 20px 24px rgba(0,0,0,.25));"';
+
+// 1. Hero Images (Right side of "Carry your story...")
+document.getElementById("heroA").innerHTML = `<img src="images/pink-satchel.jpg" alt="Dusty Rose Signature Satchel" ${heroImgStyle} />`;
+document.getElementById("heroB").innerHTML = `<img src="images/beige-ribbed-satchel.png" alt="Beige Ribbed Elegance Satchel" ${heroImgStyle} />`;
+document.getElementById("heroC").innerHTML = `<img src="images/brown-leather-wallet.png" alt="Signature Embossed Leather Wallet" ${heroImgStyle} />`;
+
+// 2. Story Image (Left side of "Designed for real life...")
+document.getElementById("storyBag").innerHTML = `<img src="images/brownSling.PNG" alt="Heritage Checkered Top-Handle" ${storyImgStyle} />`;
 
 /* ---------- Collections ---------- */
 document.getElementById("collectionGrid").innerHTML = CATEGORIES.map((c) => {
-  const p = byCat(c.id);
+  // Pull the Dusty Rose bag for Handbags, otherwise pull the first product in the category
+  let p = (c.id === "handbags") 
+    ? PRODUCTS.find(x => x.name === "Dusty Rose Signature Satchel") 
+    : byCat(c.id);
+    
   return `<a class="collection reveal" href="#shop" data-filter="${c.id}" style="background:${CAT_BG[c.id]}">
-    <div class="art">${illustration(c.id, p.color)}</div>
+    <div class="art">
+      <img src="${p.image}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));" />
+    </div>
     <h3>${c.label}</h3><p>${c.blurb}</p>
   </a>`;
 }).join("");
