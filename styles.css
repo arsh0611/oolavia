@@ -57,8 +57,10 @@ em { font-style: italic; color: var(--gold); }
   padding: 130px 5vw 70px; background: radial-gradient(circle at 85% 20%, #f3dcd2 0, transparent 45%), var(--cream);
 }
 .eyebrow { text-transform: uppercase; letter-spacing: .3em; font-size: .75rem; color: var(--gold); margin-bottom: 18px; font-weight: 400; }
-.hero h1 { font-family: var(--serif); font-size: clamp(3rem, 7vw, 6rem); line-height: 1.02; font-weight: 500; margin-bottom: 26px; }
-.lead { font-size: 1.12rem; color: var(--muted); max-width: 480px; margin-bottom: 38px; }
+.hero h1 { font-family: var(--serif); font-size: clamp(3.2rem, 7vw, 6.5rem); line-height: 0.92; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.02em; }
+.hero-tagline { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 3rem); line-height: 1.1; color: var(--ink); margin-bottom: 18px; font-style: italic; }
+.hero-tagline em { font-style: italic; }
+.lead { font-size: 1.12rem; color: var(--muted); max-width: 520px; margin-bottom: 38px; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 
 .hero-art { position: relative; height: min(70vh, 560px); }
