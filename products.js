@@ -26,8 +26,15 @@ const PRODUCTS = [
     tag: "New Arrival",
     desc: "Structured checkered silhouette featuring a signature gold-tone clasp and versatile top handle.",
     price: "", // Add a price here like "₹1,499" or leave empty to hide
-    image: "images/brownSling.PNG", // This tells the site to use your photo instead of the SVG illustration
-    url: "https://www.amazon.in/" // Replace with the actual Amazon link for this specific bag
+    image: "images/brown1.png",
+    images: [
+      "images/brown1.png",
+      "images/brown2.png",
+      "images/brown3.png",
+      "images/brown4.png",
+      "images/brown5.png"
+    ],
+    url: "https://www.meesho.com/oolavia-stylish-brown-checkerboard-structured-handbag-for-ladies/p/istd4o"
   },
   { 
     name: "Dusty Rose Signature Satchel", 
