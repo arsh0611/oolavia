@@ -83,6 +83,13 @@ document.getElementById("collectionGrid").innerHTML = CATEGORIES.map((c) => {
 const filtersEl = document.getElementById("filters");
 const gridEl = document.getElementById("productGrid");
 let active = "all";
+const productImageIndex = {};
+
+function getProductGallery(p) {
+  if (Array.isArray(p.images) && p.images.length) return p.images;
+  if (p.image) return [p.image];
+  return [];
+}
 
 function renderFilters() {
   const items = [{ id: "all", label: "All" }, ...CATEGORIES];
@@ -93,20 +100,34 @@ function renderFilters() {
 
 function renderProducts() {
   const list = PRODUCTS.filter((p) => active === "all" || p.category === active);
-  gridEl.innerHTML = list.map((p, i) => `
-    <article class="card" style="animation-delay:${i * 60}ms">
-      <div class="card-img" style="background:${CAT_BG[p.category]}">
-        ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
-        ${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy" />` : illustration(p.category, p.color)}
-      </div>
-      <div class="card-body">
-        <span class="card-cat">${CAT_LABEL[p.category]}</span>
-        <h3>${p.name}</h3>
-        <p>${p.desc}</p>
-        ${p.price ? `<span class="price">${p.price}</span>` : ""}
-        <a class="buy" href="${p.url}" target="_blank" rel="noopener sponsored">${AMAZON_ICON} Buy on Amazon</a>
-      </div>
-    </article>`).join("");
+  gridEl.innerHTML = list.map((p, i) => {
+    const gallery = getProductGallery(p);
+    const currentIndex = productImageIndex[p.name] ?? 0;
+    const currentImage = gallery[currentIndex] || p.image || "";
+    const hasGallery = gallery.length > 1;
+
+    return `
+      <article class="card" data-product-name="${p.name}" style="animation-delay:${i * 60}ms">
+        <div class="card-img" style="background:${CAT_BG[p.category]}">
+          ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
+          ${currentImage ? `<img class="gallery-main-image" src="${currentImage}" alt="${p.name}" loading="lazy" />` : illustration(p.category, p.color)}
+          ${hasGallery ? `
+            <div class="gallery-controls">
+              <button class="gallery-arrow" type="button" data-dir="prev" aria-label="Previous image">&#10094;</button>
+              <button class="gallery-arrow" type="button" data-dir="next" aria-label="Next image">&#10095;</button>
+            </div>
+            <span class="gallery-index">${currentIndex + 1}/${gallery.length}</span>
+          ` : ""}
+        </div>
+        <div class="card-body">
+          <span class="card-cat">${CAT_LABEL[p.category]}</span>
+          <h3>${p.name}</h3>
+          <p>${p.desc}</p>
+          ${p.price ? `<span class="price">${p.price}</span>` : ""}
+          <a class="buy" href="${p.url}" target="_blank" rel="noopener sponsored">${AMAZON_ICON} ${p.url.includes("meesho.com") ? "Buy on Meesho" : "Buy on Amazon"}</a>
+        </div>
+      </article>`;
+  }).join("");
 }
 
 function setFilter(id) { active = id; renderFilters(); renderProducts(); }
@@ -115,6 +136,30 @@ filtersEl.addEventListener("click", (e) => {
   const b = e.target.closest(".filter");
   if (b) setFilter(b.dataset.id);
 });
+
+gridEl.addEventListener("click", (e) => {
+  const button = e.target.closest(".gallery-arrow");
+  if (!button) return;
+
+  const card = button.closest(".card");
+  if (!card) return;
+
+  const productName = card.dataset.productName;
+  const product = PRODUCTS.find((item) => item.name === productName);
+  const gallery = getProductGallery(product);
+  if (!gallery.length) return;
+
+  const currentIndex = productImageIndex[productName] ?? 0;
+  const direction = button.dataset.dir === "next" ? 1 : -1;
+  const nextIndex = (currentIndex + direction + gallery.length) % gallery.length;
+  productImageIndex[productName] = nextIndex;
+
+  const img = card.querySelector(".gallery-main-image");
+  const index = card.querySelector(".gallery-index");
+  if (img) img.src = gallery[nextIndex];
+  if (index) index.textContent = `${nextIndex + 1}/${gallery.length}`;
+});
+
 document.getElementById("collectionGrid").addEventListener("click", (e) => {
   const c = e.target.closest(".collection");
   if (c) setFilter(c.dataset.filter);

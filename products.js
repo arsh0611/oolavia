@@ -46,8 +46,14 @@ const PRODUCTS = [
     tag: "New Arrival",
     desc: "A timeless dual-tone satchel featuring a smooth ivory flap, textured canvas body, and our signature gold bird emblem.",
     price: "", 
-    image: "images/cream-satchel.jpg", 
-    url: "https://www.amazon.in/" 
+    image: "images/white1.png",
+    images: [
+      "images/white1.png",
+      "images/white2.png",
+      "images/white3.png",
+      "images/white4.png"
+    ],
+    url: "https://www.meesho.com/oolavia-chic-dual-tone-top-handle-handbagpurse-for-women/p/isufui" 
   },
 { 
     name: "Beige Ribbed Elegance Satchel", 
