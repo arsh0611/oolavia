@@ -106,6 +106,11 @@ function renderProducts() {
     const currentIndex = productImageIndex[p.name] ?? 0;
     const currentImage = gallery[currentIndex] || p.image || "";
     const hasGallery = gallery.length > 1;
+    const isMeesho = p.url && p.url.includes("meesho.com");
+    const ctaLabel = isMeesho ? "Buy on Meesho" : "Coming Soon";
+    const ctaHref = isMeesho ? p.url : "#";
+    const ctaTarget = isMeesho ? "_blank" : "_self";
+    const ctaRel = isMeesho ? "noopener sponsored" : "";
 
     return `
       <article class="card" data-product-name="${p.name}" style="animation-delay:${i * 60}ms">
@@ -125,7 +130,7 @@ function renderProducts() {
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
           ${p.price ? `<span class="price">${p.price}</span>` : ""}
-          <a class="buy" href="${p.url}" target="_blank" rel="noopener sponsored">${AMAZON_ICON} ${p.url.includes("meesho.com") ? "Buy on Meesho" : "Buy on Amazon"}</a>
+          <a class="buy" href="${ctaHref}" target="${ctaTarget}" rel="${ctaRel}">${AMAZON_ICON} ${ctaLabel}</a>
         </div>
       </article>`;
   }).join("");
