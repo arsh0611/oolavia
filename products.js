@@ -9,7 +9,7 @@
    - category    : one of "handbags", "wallets", "sling", "tote"
    ========================================================== */
 
-const AMAZON_STORE = "https://www.amazon.in/"; // TODO: replace with your Oolavia brand store link
+const AMAZON_STORE = "https://www.meesho.com/OoLavia?_ms=3.0.1";
 
 const CATEGORIES = [
   { id: "handbags", label: "Ladies Handbags", blurb: "Polished everyday elegance" },

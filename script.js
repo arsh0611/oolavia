@@ -47,6 +47,7 @@ const CAT_BG = { handbags: "#e8c8bd", sling: "#d9c9b4", tote: "#c9d1c0", wallets
 /* ---------- Amazon store links ---------- */
 document.querySelectorAll(".amazon-store").forEach((a) => {
   a.href = AMAZON_STORE; a.target = "_blank"; a.rel = "noopener";
+  a.textContent = "Meesho Store";
 });
 
 /* ---------- Hero illustrations ---------- */
